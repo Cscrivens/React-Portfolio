@@ -1,0 +1,355 @@
+/* App.css */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding-bottom: 100px; /* Add padding to prevent footer from covering content */
+}
+
+
+/* Header */
+.header {
+  background-color: #0c0b0b;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed; /* Make the header fixed at the top */
+  width: 100%; /* Make the header cover the entire width */
+  z-index: 1000; /* Ensure the header stays on top of other content */
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  animation: color-change 3s infinite; /* Apply color change animation */
+  padding-top: 80px; /* Add top padding to prevent overlap */
+}
+
+
+/* Add some styles for the h1 element */
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  animation: color-change 3s infinite; /* Apply color change animation */
+  text-align: center; /* Center align the text */
+  margin-bottom: 10px; /* Adjust the margin to lower the gap */
+
+}
+
+/* Keyframes for color change animation */
+@keyframes color-change {
+  0% {
+    color: #fcdcdc; /* Start color */
+  }
+  33% {
+    color: #eff4f7; /* Middle color */
+  }
+  66% {
+    color: #aaaae6; /* End color */
+  }
+  100% {
+    color: #706262; /* Back to start color */
+  }
+}
+
+/* Add some hover effect to the header */
+.header:hover {
+  background-color: #444; /* Darken background on hover */
+  cursor: pointer;
+}
+
+.header:hover h1 {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+/* Add some decoration to the header */
+.header::before,
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  z-index: -1; /* Behind the header content */
+}
+
+.header::before {
+  left: 0;
+}
+
+.header::after {
+  right: 0;
+}
+
+
+
+
+/* Navbar */
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0; /* Reduced padding for the navbar */
+  text-align: center;
+  width: 100%; /* Make the navbar cover the entire width */
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 0; /* Adjust the top position to the very top */
+  z-index: 1000; /* Ensure the navbar stays above other content */
+}
+
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px; /* Add padding to the links for better clickability */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+.navbar ul li a:hover {
+  background-color: #555; /* Darken the background on hover */
+  border-radius: 5px; /* Add some rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+
+/* Portfolio */
+.portfolio {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust as needed */
+  gap: 20px; /* Add gap between items */
+  justify-content: center; /* Center align content horizontally */
+  align-items: center; /* Center align content vertically */
+}
+
+.project {
+  border: 1px solid #ccc; /* Add border for better separation */
+  padding: 20px; /* Add padding for spacing */
+  display: flex; /* Use flexbox to center content */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center align content horizontally */
+  text-align: center; /* Center align text */
+}
+
+.project h2 {
+  margin-bottom: 10px;
+}
+
+.project p {
+  margin-bottom: 20px;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 100%; /* Ensure image fits within container */
+  height: auto;
+  display: block;
+  margin-bottom: 10px; /* Add space between images */
+}
+
+.project-links {
+  display: flex; /* Use flexbox to center links */
+  justify-content: center; /* Center align links horizontally */
+}
+
+.project-links a {
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid #333;
+  color: #333;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+  margin: 0 5px; /* Add space between links */
+}
+
+.project-links a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-image {
+  text-align: center;
+  margin-top: auto;
+}
+
+.about-image img {
+  max-width: 100%;
+  max-height: 50vh;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 5px;
+  width: 185vh;
+  margin: 0;
+}
+
+.contact-content {
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contact-info {
+  margin-bottom: 50px; /* Adjusted margin */
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Resume */
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.resume-content {
+  max-width: 800px;
+}
+
+.resume-container h1, .resume-container h2, .resume-container h3 {
+  color: #ab2828;
+}
+
+.resume-container h2 {
+  border-bottom: 2px solid #ab2525;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.resume-container p {
+  margin: 10px 0;
+}
+
+.resume-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.resume-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.resume-container a:hover {
+  text-decoration: underline;
+}
+
+
+/* Style the carousel container */
+.carousel-root {
+  max-width: 90%; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center align the carousel */
+}
+
+/* Style the images inside the carousel */
+.carousel .slide img {
+  width: 100%; /* Ensure the image takes up the entire width of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure the image fits within the container */
+  max-height: 100%; /* Ensure the image does not exceed the container height */
+}
